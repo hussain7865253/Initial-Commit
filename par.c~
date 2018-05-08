@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{    int i;
+    char name;
+    int one=0,zero=0;
+    int count=0;
+    int no;
+    printf("Enter The Name:-");
+    scanf("%s",&name);
+    printf("Enter The Parity:-");
+    scanf("%d",&no);
+    for(i=0;name[i]!='\0';i++)
+        {
+            if(name[i]=='1')
+                {
+                    one++;
+                }
+            else
+                {
+                    zero++;
+                }
+            count++;
+        }
+    printf("\nZero Are:-%d",zero);
+    printf("\nOne Are:-%d",one);
+    if(no==0)
+        {
+            if(one%2==0)
+            {       
+                printf("\nEven Parity");
+                printf("\n0");
+                scanf("%d",name);   
+            }
+            else
+            {
+                printf("\nEven Parity");
+                printf("\n1");
+                scanf("%d",name);
+            }
+        }
+    else
+       
+        {
+            if(one%2==0)
+            {       
+                printf("\nOdd Parity");
+                printf("\n1");
+                scanf("%d",name);   
+            }
+            else
+            {
+                printf("\nOdd Parity");
+                printf("\n0");
+                scanf("%d",name);
+            }
+        }   
+}
